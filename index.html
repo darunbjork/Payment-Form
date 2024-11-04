@@ -10,31 +10,36 @@
     <div class="payment-container">
         <h1>Payment Form (HTML, CSS, JS)</h1>
         <div class="payment-card">
+            <!-- Card Preview Section -->
             <div class="card-preview">
-                <div class="card-number">4343 4343 4343 4343</div>
+                <div class="card-number" id="display-card-number">#### #### #### ####</div>
                 <div class="card-holder">
                     <span>CARD HOLDER</span>
-                    <span class="holder-name">John Galt</span>
+                    <span class="holder-name" id="display-holder-name">John Galt</span>
                 </div>
                 <div class="card-expiry">
                     <span>VALID THRU</span>
-                    <span class="expiry-date">43/43</span>
+                    <span class="expiry-date" id="display-expiry-date">MM/YY</span>
                 </div>
             </div>
+            <!-- Payment Form Section -->
             <div class="payment-form">
                 <h2>Payment Details</h2>
                 <label>Cardholder Name</label>
                 <input type="text" placeholder="John Galt" id="cardholder-name">
                 
                 <label>Card Number</label>
-                <input type="text" placeholder="4343 4343 4343 4343" id="card-number">
+                <input type="text" placeholder="#### #### #### ####" id="card-number" maxlength="19">
                 
                 <div class="date-cvv">
-                    <label>Exp Date</label>
-                    <input type="text" placeholder="MM/YY" id="exp-date">
-                    
-                    <label>CVV</label>
-                    <input type="text" placeholder="000" id="cvv">
+                    <div>
+                        <label>Exp Date</label>
+                        <input type="text" placeholder="MM/YY" id="exp-date" maxlength="5">
+                    </div>
+                    <div>
+                        <label>CVV</label>
+                        <input type="text" placeholder="000" id="cvv" maxlength="3">
+                    </div>
                 </div>
                 
                 <button onclick="validateForm()">Confirm</button>
